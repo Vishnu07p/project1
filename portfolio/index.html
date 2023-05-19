@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+        .main-content{
+            width: 1280px;
+            max-width: 95%;
+            margin: 0 auto;
+            padding: 0px 20px;
+           
+        }
+body{
+    background: linear-gradient( rgba(0, 0, 0,0.5),rgba(0, 0, 0,0.5)),url(background.jpg);
+    background-size:cover;
+            background-position:center ;
+            position: relative;
+}
+        .hero{
+            width: 100%;
+            height: 100%;
+            min-height: 100vh;
+          
+            background-size:cover;
+            background-position:center ;
+            position: relative;
+            
+        }
+        header{
+            padding: 40px 0 30px;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            height: 55px;
+            width: 55px;
+            background: transparent;
+            border: 2px solid #2ecc71;
+            color: #2ecc71;
+            border-radius: 50%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        p{
+            color:rgb(229, 191, 145);
+        }
+        nav .hamb{
+            width: 35px;
+            height: 24px;
+            right: 3%;
+            top: 60px;
+            z-index: 5;
+            background: white;
+            position: absolute;
+            cursor: pointer;
+
+        }
+        nav .hamb span{
+            display: block;
+            background-color: #2ecc71;
+            width: 100%;
+            height: 3px;
+            transition:  .3s;
+            transition-property: transform,opacity;
+        }
+        nav .hamb span:nth-child(2){
+            margin: 7px 0px;
+        }
+        nav .nav-list{
+           list-style: none;
+
+        }
+        nav .nav-list li {
+            display: inline-block;
+        }
+        nav .nav-list li a {
+            display: inline-block;
+            color:#eee;
+            margin-left: 55px;
+            font-size: 15px;
+            font-weight: 600;
+
+        }
+        nav .nav-list li:not(:last-child) a:hover{
+            color: #2ecc71;
+            transition: .4s;
+        }
+        nav .nav-list li.btn a{
+            display: inline-block;
+            background: transparent;
+            border: 2px solid #2ecc71;
+            padding: 9px 28px;
+            border-radius: 30px;
+            line-height: 1.3;
+            color: #2ecc71;
+            font-weight: 500;
+        }
+        nav .nav-list li.btn:hover a{
+            background-color: #2ecc71;
+            color: white;
+            border: 2px solid transparent;
+            transition: .4s;
+        }
+        .container{
+            padding-top: 100px;
+
+        }
+        .container .hero-text{
+            margin-bottom: 35px;
+
+        }
+        .container  h1{
+            color: white;
+            font-size: 47px;
+font-weight: 900
+;
+line-height: 1.2;
+margin: 20px 0px 20px;        }
+span{
+    color:#2ecc71; ;
+}
+h3{
+    color: #eee;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+.social a{
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    color: #eee;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-top: 20px;
+background-color: rgb(255, 255, 255,0.1);
+margin-bottom: 35px;
+}
+.social a:hover{
+    transform: scale(1.1);
+    background-color: #2ecc71;
+    transition: .4s;
+}
+.container .hero-text button{
+    color: #eee;
+    background-color: #2ecc71;
+    font-size: 16px;
+    font-weight: 500;
+    line-height:24px ;
+    padding: 8px 30px;
+    border: 2px solid #2ecc71;
+    border-radius: 30px;
+    cursor: pointer;
+
+}
+.container .hero-text button:hover{
+    background: transparent;
+    border:2px solid #2ecc71 ;
+    color: #2ecc71;
+    transition: .4s;
+}
+.bottom{
+    margin-top: 100px;
+    padding-bottom: 40px;
+
+}
+.bottom p{
+    color :#eee;
+    letter-spacing: 2px;
+    font-size: 15px;
+
+}
+p{
+    width: 500px;
+}
+
+@media screen  and(max-width:930px){
+
+nav .hamb{
+    display: initial;
+}
+.click{
+    top: 46px;
+}
+.click span:first-child{
+    transform: rotate(-40deg);
+}
+.click span:nth-child(2){
+    opacity: 0;
+    margin: 0;
+}
+.click span:last-child{
+    transform: rotate(40deg);
+    top: 0;
+}
+nav .nav-list{
+    position: absolute;
+    top: 90px;
+    right: 0;
+    bottom: 0;
+    width: 60%;
+    height: 50%;
+    background: black;
+    z-index: 2;
+    padding: 6%
+    9%;
+    transition: .3s right;
+    border-radius: 10px;
+}
+nav  .nav-list li{
+display: block;
+} 
+nav .nav-list{
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    margin-left: 0;
+    margin-bottom:40px ;
+}
+nav .nav-list li.btn a{
+    position: absolute;
+    bottom:0% ;
+    right: 20;
+}
+}
+@media (max-width:800px){
+    .nav-list{
+        
+        display: flex;
+        flex-direction: column;
+     
+    text-align: center;
+
+    margin-top: 10px;
+      
+    }
+    header{
+    
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+
+    }
+    .logo{
+        text-align: center;
+        position: relative;
+        left: 25px;
+    }
+    .btn{
+        margin-top: 20px;
+    }
+}
+    </style>
+</head>
+<body>
+
+
+    <Section class="hero">
+<div class="main-content">
+
+<header>
+    <div class="logo">
+V
+    </div><div>
+    <nav>
+        
+
+<ul class="nav-list">
+<li><a href="">Home</a></li>
+<li><a href="">About</a></li>
+<li><a href="">Services</a></li>
+<li><a href="">Works</a></li>
+<li class="btn"><a href="">Contact Me</a></li>
+
+        </ul>
+    </nav></div>
+</header>
+<div class="container">
+    <div class="hero-text">
+<h3>Hi, There!</h3>
+<h1>I am <span>Vishnu prasath. . .</span></h1>
+<p>
+   I am Web-Developer and Automation Tester.
+</p>
+<div class="social">
+<a href=""><i class="fa-brands fa-facebook"></i></a>
+<a href=""><i class="fa-brands fa-instagram"></i></a>
+<a href=""><i class="fa-brands fa-twitter"></i></a>
+<a href=""><i class="fa-brands fa-github"></i></a>
+
+</div>
+<button>
+    More about me
+</button>
+</div>
+</div>
+<div class="bottom"><p>
+    &copy;  2023 Vishnu - All Rights Reserved.
+</p></div>
+
+</div>
+
+
+
+    </Section>
+    <script>
+
+    </script>
+    
+</body>
+</html>
